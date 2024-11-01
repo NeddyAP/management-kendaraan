@@ -99,14 +99,14 @@ class LaporanController extends Controller
             $sukuCadangs = SukuCadang::get();
             return view('laporan.print2', compact('paguAnggarans', 'tahun', 'startDate', 'endDate', 'belanjas', 'sukuCadangs'));
         } elseif ($request->input('jenis_laporan') == 3) {
-            $kendaraans = Kendaraan::orderByRaw('CAST(roda_kendaraan AS UNSIGNED)')->orderBy('cc_kendaraan', 'asc')->orderBy('anggaran_pertahun_kendaraan', 'asc')
+            $kendaraans = Kendaraan::orderByRaw('CAST(roda_kendaraan AS INT)')->orderBy('cc_kendaraan', 'asc')->orderBy('anggaran_pertahun_kendaraan', 'asc')
                 ->get();
             $belanjas = Belanja::get();
             $sukuCadangs = SukuCadang::get();
             $semuaGroupAnggaranKendaraans = GroupAnggaranKendaraan::with('groupAnggaran')->get();
             return view('laporan.print3', compact('tahun', 'kendaraans', 'belanjas', 'sukuCadangs', 'semuaGroupAnggaranKendaraans'));
         } elseif ($request->input('jenis_laporan') == 4) {
-            $kendaraans = Kendaraan::with('belanjas')->orderByRaw('CAST(roda_kendaraan AS UNSIGNED)')->orderBy('cc_kendaraan', 'asc')->orderBy('anggaran_pertahun_kendaraan', 'asc')
+            $kendaraans = Kendaraan::with('belanjas')->orderByRaw('CAST(roda_kendaraan AS INT)')->orderBy('cc_kendaraan', 'asc')->orderBy('anggaran_pertahun_kendaraan', 'asc')
                 ->get();
             $belanjas = Belanja::get();
             $sukuCadangs = SukuCadang::get();
