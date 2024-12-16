@@ -15,7 +15,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek:
 
 1. Kloning repositori
    ```
-   git clone https://github.com/neddy1298/management-kendaraan
+   git clone https://github.com/neddyap/management-kendaraan
    
    cd management-kendaraan
    ```
