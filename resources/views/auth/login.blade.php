@@ -61,7 +61,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" autocomplete="off" name="email" value="">
+                    <input type="text" class="form-control" autocomplete="off" name="email" value="admin@example.com">
                     @if ($errors->has('email'))
                         <div class="text-red">
                             {{ $errors->first('email') }}
@@ -72,7 +72,7 @@
                     <div class="d-flex justify-content-between">
                         <label class="form-label">Password</label>
                     </div>
-                    <input type="password" class="form-control" name="password" value="">
+                    <input type="password" class="form-control" name="password" value="admin">
                     @if ($errors->has('password'))
                         <div class="text-red">
                             {{ $errors->first('password') }}
