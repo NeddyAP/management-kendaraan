@@ -15,19 +15,19 @@
     <meta property="og:description" content="Website untuk management kendaraan Dinas Perhubungan Kota Bogor">
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Management Kendaraan">
-    <link rel="shortcut icon" href="{{ asset('images/logokbr.ico') }}">
+    <link rel="shortcut icon" href="{{ secure_asset('images/logokbr.ico') }}">
 
     <title>Management Kendaraan</title>
 
 
     <!-- Animated css -->
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/animate.css') }}">
 
     <!-- Bootstrap font icons css -->
-    <link rel="stylesheet" href="{{ asset('fonts/bootstrap/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('fonts/bootstrap/bootstrap-icons.css') }}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/main.min.css') }}">
 
 
 </head>
@@ -53,11 +53,13 @@
         <div class="login-box">
             <div class="login-form">
                 <a href="" class="login-logo">
-                    <img src="{{ asset('images/kotabogor.png') }}" alt="Kota Bogor" />&nbsp;&nbsp;
-                    <img src="{{ asset('images/dishub.png') }}" alt="Dinas Perhubungan" />
+                    <img src="{{ secure_asset('images/kotabogor.png') }}" alt="Kota Bogor" />&nbsp;&nbsp;
+                    <img src="{{ secure_asset('images/dishub.png') }}" alt="Dinas Perhubungan" />
                 </a>
                 <div class="login-welcome">
-                    Selamat Datang, <br />Silahkan login menggunakan akun admin.
+                    Selamat Datang, <br />Silahkan login menggunakan akun admin. <br />
+                    <strong style="color: red">ini adalah aplikasi demo tidak menggunakan data asli dinas perhubungan
+                        kota bogor</strong>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
@@ -94,17 +96,17 @@
    ************ Required JavaScript Files *************
   ************* -->
     <!-- Required jQuery first, then Bootstrap Bundle JS -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/modernizr.js') }}"></script>
-    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ secure_asset('js/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('js/modernizr.js') }}"></script>
+    <script src="{{ secure_asset('js/moment.js') }}"></script>
 
     <!-- *************
    ************ Vendor Js Files *************
   ************* -->
 
     <!-- Main Js Required -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ secure_asset('js/main.js') }}"></script>
 
 </body>
 

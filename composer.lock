@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "530541c70eee21d083545d6c2b9afa70",
+    "content-hash": "db622c76c03a90c230ff11b9a63378d5",
     "packages": [
         {
             "name": "brick/math",
@@ -6201,6 +6201,7 @@
     ],
     "packages-dev": [
         {
+<<<<<<< HEAD
             "name": "barryvdh/laravel-debugbar",
             "version": "v3.15.4",
             "source": {
@@ -6286,6 +6287,8 @@
             "time": "2025-04-16T06:32:06+00:00"
         },
         {
+=======
+>>>>>>> 2f70480b7c8d7ad6ffe705a53c482c72dcc923c9
             "name": "fakerphp/faker",
             "version": "v1.24.1",
             "source": {
@@ -6658,7 +6661,11 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
+<<<<<<< HEAD
             "time": "2025-05-19T13:19:21+00:00"
+=======
+            "time": "2024-08-02T07:45:47+00:00"
+>>>>>>> 2f70480b7c8d7ad6ffe705a53c482c72dcc923c9
         },
         {
             "name": "mockery/mockery",

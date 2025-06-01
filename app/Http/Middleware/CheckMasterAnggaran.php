@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Cache;
 
 class CheckMasterAnggaran
 {
+
     public function handle(Request $request, Closure $next)
     {
         $masterAnggaranCount = Cache::remember('master_anggaran_count', 60, function () {

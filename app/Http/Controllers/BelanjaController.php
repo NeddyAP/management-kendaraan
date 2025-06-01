@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\DB;
 
 class BelanjaController extends Controller
 {
-
     public function index(Request $request)
     {
         $dateRange = $request->input('date-range');
@@ -53,7 +52,7 @@ class BelanjaController extends Controller
             $query->where('berlaku_sampai', '<', Carbon::now());
         })->count();
 
-        $belanjas = $query->orderBy('created_at', 'desc')->paginate(20);
+        $belanjas = $query->paginate(20);
 
 
         return view('belanja.index', compact('belanjas', 'isExpire', 'belanja_periode', 'belanja_bbm_periode', 'belanja_pelumas_periode', 'belanja_suku_cadang_periode', 'dateRange', 'search'));
@@ -75,7 +74,6 @@ class BelanjaController extends Controller
             ->get();
         return response()->json($groupAnggarans);
     }
-
     public function store(Request $request)
     {
         $validatedData = $this->validateBelanja($request);
@@ -104,6 +102,7 @@ class BelanjaController extends Controller
 
     private function createBelanja($data)
     {
+
         return Belanja::create([
             'group_anggaran_id' => $data['group_anggaran_id'],
             'kendaraan_id' => $data['kendaraan_id'],
@@ -117,6 +116,7 @@ class BelanjaController extends Controller
 
     private function createSukuCadangs($data, $belanja)
     {
+
         if (!empty($data['nama_suku_cadang'])) {
             foreach ($data['nama_suku_cadang'] as $key => $sukuCadangId) {
                 if (!empty($sukuCadangId) && isset($data['jumlah_suku_cadang'][$key]) && isset($data['harga_suku_cadang'][$key])) {
@@ -145,12 +145,10 @@ class BelanjaController extends Controller
             }
         }
     }
-
     public function show(Belanja $belanja)
     {
         return view('belanja.show', compact('belanja'));
     }
-
     public function destroy($id)
     {
         $belanja = Belanja::with('sukuCadangs')->findOrFail($id);
@@ -165,7 +163,6 @@ class BelanjaController extends Controller
         $belanja->delete();
         return redirect()->back()->with('success', 'Data berhasil dihapus.');
     }
-
     protected function validateBelanja(Request $request)
     {
         return $request->validate([

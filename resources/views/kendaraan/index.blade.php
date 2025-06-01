@@ -2,8 +2,8 @@
 
 @section('css')
     <!-- Data Tables -->
-    <link rel="stylesheet" href="{{ asset('vendor/datatables/dataTables.bs5.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/datatables/dataTables.bs5-custom.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('vendor/datatables/dataTables.bs5.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('vendor/datatables/dataTables.bs5-custom.css') }}">
 @endsection
 
 @section('content')
@@ -48,6 +48,12 @@
             @elseif (session('error'))
                 @include('partials.alert', ['type' => 'danger', 'message' => session('error')])
             @endif
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <i class="bi bi-check-circle alert-icon"></i>
+                <strong>Perhatian!</strong> Plat Nomor sudah di rubah menggunakan angka random tidak menggunakan data asli.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
 
             <!-- Card start -->
             <div class="card">
@@ -128,9 +134,9 @@
 
 @section('script')
     <!-- Data Tables -->
-    <script src="{{ asset('vendor/datatables/dataTables.min.js') }}"></script>
-    <script src="{{ asset('vendor/datatables/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ secure_asset('vendor/datatables/dataTables.min.js') }}"></script>
+    <script src="{{ secure_asset('vendor/datatables/dataTables.bootstrap.min.js') }}"></script>
 
     <!-- Custom Data tables -->
-    <script src="{{ asset('vendor/datatables/custom/custom-datatables.js') }}"></script>
+    <script src="{{ secure_asset('vendor/datatables/custom/custom-datatables.js') }}"></script>
 @endsection

@@ -12,18 +12,18 @@
     <meta property="og:title" content="Dinas Perhubungan | Management Kendaraan">
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Management Kendaraan">
-    <link rel="shortcut icon" href="{{ asset('images/logokbr.ico') }}">
+    <link rel="shortcut icon" href="{{ secure_asset('images/logokbr.ico') }}">
 
     <!-- Title -->
     <title>@yield('title', 'Management Kendaraan')</title>
 
     <!-- Common CSS Files -->
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/bootstrap/bootstrap-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('fonts/bootstrap/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/main.min.css') }}">
 
     <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="{{ asset('vendor/overlay-scroll/OverlayScrollbars.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('vendor/overlay-scroll/OverlayScrollbars.min.css') }}">
 
     @yield('css')
 </head>
@@ -113,26 +113,26 @@
                 </div>
 
                 <div class="app-footer">
-                    <span>© Dinas Perhubungan Kota Bogor 2024. All rights reserved.</span>
+                    <span>© Neddy Avgha Prasetio. All rights reserved.</span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Required JavaScript Files -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/modernizr.js') }}"></script>
-    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ secure_asset('js/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('js/modernizr.js') }}"></script>
+    <script src="{{ secure_asset('js/moment.js') }}"></script>
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('vendor/overlay-scroll/jquery.overlayScrollbars.min.js') }}"></script>
-    <script src="{{ asset('vendor/overlay-scroll/custom-scrollbar.js') }}"></script>
+    <script src="{{ secure_asset('vendor/overlay-scroll/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="{{ secure_asset('vendor/overlay-scroll/custom-scrollbar.js') }}"></script>
 
     @yield('script')
 
     <!-- Main JS Required -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ secure_asset('js/main.js') }}"></script>
 
 </body>
 

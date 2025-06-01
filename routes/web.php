@@ -13,6 +13,7 @@ use App\Http\Controllers\{
     StokSukuCadangController,
 };
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -88,12 +89,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/get-group-anggaran/{kendaraan_id}', [BelanjaController::class, 'getGroupAnggaran']);
     });
 
-
     Route::prefix('profile')->group(function () {
         Route::get('', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::post('', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 });
+
+URL::forceScheme('https');
 
 require __DIR__ . '/auth.php';

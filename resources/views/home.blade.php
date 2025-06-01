@@ -153,9 +153,9 @@
 @endsection
 
 @section('script')
-    <script src="{{ asset('vendor/apex/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('vendor/apex/custom/sales/salesGraph.js') }}"></script>
-    <script src="{{ asset('vendor/apex/custom/sales/revenueGraph.js') }}"></script>
+    <script src="{{ secure_asset('vendor/apex/apexcharts.min.js') }}"></script>
+    <script src="{{ secure_asset('vendor/apex/custom/sales/salesGraph.js') }}"></script>
+    <script src="{{ secure_asset('vendor/apex/custom/sales/revenueGraph.js') }}"></script>
 
     <script>
         var options = {

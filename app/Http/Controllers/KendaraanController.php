@@ -13,7 +13,10 @@ class KendaraanController extends Controller
     public function index()
     {
         // $kendaraans = Kendaraan::with('belanjas')->orderBy('cc_kendaraan', 'desc')->get();
-        $kendaraans = Kendaraan::with('belanjas')->orderByRaw('CAST(roda_kendaraan AS UNSIGNED)')->orderBy('cc_kendaraan', 'asc')->orderBy('anggaran_pertahun_kendaraan', 'asc')
+        $kendaraans = Kendaraan::with('belanjas')
+            ->orderByRaw('CAST(roda_kendaraan AS INT)')
+            ->orderBy('cc_kendaraan', 'asc')
+            ->orderBy('anggaran_pertahun_kendaraan', 'asc')
             ->get();
 
         $isExpire = $kendaraans->filter(function ($kendaraan) {
@@ -37,7 +40,6 @@ class KendaraanController extends Controller
 
         $kendaraan = Kendaraan::create($validatedData);
 
-        // Attach group anggaran to kendaraan
         $kendaraan->groupAnggarans()->attach($request->groupAnggaran_id);
 
         return redirect()->route('kendaraan.index')->with('success', 'Kendaraan berhasil ditambahkan');
